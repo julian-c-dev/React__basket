@@ -1,0 +1,11 @@
+.nav_flex {
+  width: 100%;
+  background-color: azure;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.nav__group {
+  margin: 1rem;
+}
