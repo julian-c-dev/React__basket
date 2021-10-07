@@ -15,7 +15,7 @@ const NavBar = (props) => {
       </nav>
       <div className="nav_flex">
         <span className="nav__group">
-          <span>Diferent products: </span>
+          <span>Different products: </span>
           <span className="badge badge-pill badge-secondary">
             {props.totalCounters}
           </span>
