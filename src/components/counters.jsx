@@ -3,29 +3,38 @@ import Counter from "./counter";
 
 class Counters extends Component {
   render() {
+    const {
+      onReset,
+      onDeleteAll,
+      counters,
+      onDelete,
+      onIncrement,
+      onDecrement,
+    } = this.props;
+
     return (
       <div>
         <button
-          onClick={this.props.onReset}
+          onClick={onReset}
           className="btn btn-outline-primary btn-sm m-2"
         >
           Quantity to 0
         </button>
         <button
-          onClick={this.props.onDeleteAll}
+          onClick={onDeleteAll}
           className="btn btn-outline-primary btn-sm m-2"
         >
           Delete all the Items
         </button>
-        {this.props.counters.length === 0 && (
+        {counters.length === 0 && (
           <h5 style={{ padding: "1rem" }}>There are no items in the basket</h5>
         )}
-        {this.props.counters.map((counter) => (
+        {counters.map((counter) => (
           <Counter
             key={counter.id}
-            onDelete={this.props.onDelete}
-            onIncrement={this.props.onIncrement}
-            onDecrement={this.props.onDecrement}
+            onDelete={onDelete}
+            onIncrement={onIncrement}
+            onDecrement={onDecrement}
             counter={counter}
           />
         ))}
